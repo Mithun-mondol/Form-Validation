@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<section id="main">
+			<div class="popup_container">
+				<div class="popup_wrap">
+					<div class="popup">
+						<span class="close">&times;</span>
+						<h1>Sorry!! You are under age</h1>
+						<p>To complete your registration your age must be above 18 year old.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<form id="form" action="">
+					<div class="form_container">
+						<label for="fname">First Name:</label>
+						<input type="text" name="fname" id="fname" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="lname">Last Name:</label>
+						<input type="text" name="lname" id="lname" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+
+					<div class="form_container">
+						<label for="dob">Date of Birth:</label>
+						<input type="date" name="dob" id="dob" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="email">Email ID:</label>
+						<input type="text" name="email" id="email" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="password">Password:</label>
+						<input type="password" name="password" id="password" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<i class="fa-solid fa-eye eye_open"></i>
+						<i class="fa-solid fa-eye-slash eye_close"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="conform_password">Conform Password:</label>
+						<input type="password" name="conform_password" id="conform_password" />
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<i class="fa-solid fa-eye con_eye_open"></i>
+						<i class="fa-solid fa-eye-slash con_eye_close"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="country">Country:</label>
+						<select name="country" id="country">
+							<option value="">Select your country</option>
+							<option value="+61">Australia</option>
+							<option value="+880">Bangladesh</option>
+							<option value="+1">Canada</option>
+							<option value="+86">China</option>
+							<option value="+45">Denmark</option>
+							<option value="+33">France</option>
+						</select>
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="phone">Phone:</label>
+						<div class="phone_wrap">
+							<input type="number" name="phone" id="code" disabled />
+							<input type="number" name="phone" id="phone" />
+						</div>
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+
+					<div class="form_container">
+						<label for="yes">Are you a exiting customer?</label>
+						<div class="input_option">
+							<div class="input_option_yes">
+								<input type="radio" name="exiting_customer" id="yes" />
+								<label for="exiting_customer">Yes</label>
+							</div>
+							<div class="input_option_yes">
+								<input type="radio" name="exiting_customer" id="no" />
+								<label for="exiting_customer">No</label>
+							</div>
+						</div>
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<p class="err_message">errMessageShown</p>
+					</div>
+					<div class="form_container">
+						<label for="message">Message:</label>
+						<textarea name="message" id="message" cols="30" rows="10"></textarea>
+						<i class="fa-solid fa-circle-check icon_success"></i>
+						<i class="fa-solid fa-circle-exclamation icon_err"></i>
+						<span class="text_count">0</span>
+						<p class="err_message">errMessageShown</p>
+					</div>
+
+					<div class="form_container">
+						<input type="submit" value="Submit" class="submit" />
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<script src="https://kit.fontawesome.com/8d3ac219e2.js" crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

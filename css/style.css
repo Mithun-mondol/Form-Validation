@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+#main {
+	/* width: 100vw; */
+	background: url(../images/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+/* ! Popup Window CSS Style */
+
+.popup_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none;
+}
+
+.popup_wrap {
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup {
+	width: 40rem;
+	height: 40rem;
+	background-color: rgba(223, 46, 55, 0.85);
+	border-radius: 1rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+}
+
+.popup h1 {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.popup p {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.close {
+	font-size: 6rem;
+	line-height: 1;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 2rem;
+}
+
+.container {
+	width: 50%;
+	background-color: rgba(77, 69, 93, 0.3);
+	border-radius: 2rem;
+	box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.8);
+
+	display: flex;
+	justify-content: center;
+}
+
+#form {
+	margin: 2rem 0;
+	width: 40rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.form_container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	position: relative;
+}
+
+.phone_wrap {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+#code {
+	width: 12rem;
+}
+
+.form_container label {
+	font-family: inherit;
+	font-size: 2rem;
+}
+
+.form_container input,
+#country {
+	font-family: inherit;
+	font-size: 1.6rem;
+	border: 2px solid #ad7be9;
+	border-radius: 10rem;
+	padding: 1rem 2rem;
+}
+
+.form_container input:focus,
+#country:focus {
+	outline: none;
+	border: 2px solid #3a98b9;
+}
+
+.form_container input::-webkit-outer-spin-button,
+.form_container input::-webkit-inner-spin-button,
+#country {
+	appearance: none;
+}
+
+#country:focus option:first-of-type {
+	display: none;
+}
+
+.form_container i {
+	position: absolute;
+	top: 4.4rem;
+	right: -2.5rem;
+}
+
+.icon_success {
+	/* background-color: #fff; */
+	/* border-radius: 50%; */
+	color: #5d9c59;
+	visibility: hidden;
+}
+
+.icon_err {
+	/* background-color: #fff; */
+	/* border-radius: 50%; */
+	color: #df2e38;
+	visibility: hidden;
+}
+
+.form_container .eye_open,
+.form_container .eye_close,
+.form_container .con_eye_open,
+.form_container .con_eye_close {
+	position: absolute;
+	top: 4.4rem;
+	right: 2rem;
+	cursor: pointer;
+}
+
+.form_container .eye_open,
+.form_container .con_eye_open {
+	color: #5d9c59;
+}
+
+.form_container .eye_close,
+.form_container .con_eye_close {
+	color: #df2e38;
+	visibility: hidden;
+}
+
+.input_option {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 4rem;
+}
+
+.input_option_yes {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.input_option_yes input {
+	appearance: none;
+	padding: 1.2rem;
+	height: 1.2rem;
+	width: 1.2rem;
+	background-color: #fff;
+	border: 3px solid #fff;
+	transition: all 0.4s;
+	position: relative;
+}
+
+.input_option_yes input::after {
+	content: "";
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: #5d9c59;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: all 0.4s;
+}
+
+.input_option_yes:hover input {
+	border: 3px solid #5d9c59;
+}
+
+.input_option_yes input:checked {
+	border: 3px solid #5d9c59;
+}
+
+.input_option_yes input:checked::after {
+	opacity: 1;
+}
+
+.err_message {
+	color: #e96479;
+	font-weight: 700;
+	visibility: hidden;
+}
+
+.form_container textarea {
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	border: 2px solid #ad7be9;
+}
+
+.form_container textarea:focus {
+	outline: none;
+	border: 2px solid #3a98b9;
+}
+
+.text_count {
+	text-align: right;
+}
+
+.form_container:last-child {
+	align-items: flex-end;
+}
+
+.form_container .submit {
+	width: 10rem;
+	font-family: inherit;
+	font-size: 2rem;
+	color: #fff;
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: #e96479;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.form_container .submit:hover {
+	background-color: #5d9c59;
+}
+
+/* ! ................. Add "success" Class ....................... */
+
+.form_container.success input {
+	border: 2px solid #5d9c59;
+}
+
+.form_container.success .icon_success {
+	visibility: visible;
+}
+
+.form_container.success .input_option_yes input {
+	border: 3px solid #fff;
+}
+
+.form_container.success .input_option_yes input:checked {
+	border: 3px solid #5d9c59;
+}
+
+.form_container.success textarea {
+	border: 2px solid #5d9c59;
+}
+
+/* ! ........................ Add "error" Class ........................ */
+
+.form_container.error input {
+	border: 2px solid #df2e38;
+}
+
+.form_container.error .err_message {
+	visibility: visible;
+}
+
+.form_container.error .icon_err {
+	visibility: visible;
+}
+
+.form_container.error .input_option_yes input {
+	border: 3px solid #df2e38;
+}
+
+.form_container.error textarea {
+	border: 2px solid #df2e38;
+}
